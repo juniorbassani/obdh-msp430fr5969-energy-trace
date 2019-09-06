@@ -20,10 +20,10 @@ for arg; do
     # the energy of the line in the file .energy.csv
     while IFS= read -r line; do
         if [ $counter -gt 1 ]; then
-            formatted=$(echo $line | awk -F\; '{print $4}')
-            formatted=$(sed 's/"//g' <<< $formatted)
+            energy=$(echo $line | awk -F\; '{print $4}')
+            energy=$(sed 's/"//g' <<< $energy)
 
-            echo $formatted >> .energy.csv
+            echo $energy >> .energy.csv
         fi
 
         ((counter++))
