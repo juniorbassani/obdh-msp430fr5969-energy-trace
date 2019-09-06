@@ -1,9 +1,15 @@
 #!/bin/bash
 
+# TODO: Only select the line to be saved
+# and save in another file
+
 lines_to_delete=19138
 
 for arg
 do
+    # Include another field in header
+    sed -i '1s/$/,Variation (uJ)/' $arg
+
     # Delete 19138 lines, since the time is measured
     # in nanoseconds, and increment line pointer.
     # The file will end up with 121
@@ -20,4 +26,24 @@ do
 
     # Replace semicolons by commas
     sed -i 's/;/,/g' $arg
+
+    counter=1
+    previous=0
+
+    # Read the csv file line by line, calculate the 
+    # variation in energy from the previous measurement,
+    # and store the result in the new field
+    while IFS= read -r line; do
+        if [ $counter -gt 1 ]; then
+            curr=$(echo $line | awk -F, '{print $4}')
+            curr=$(sed 's/"//g' <<< $curr)
+
+            res=$(echo "$curr - $previous" | bc -l)
+            previous=$curr
+
+            sed -i "$counter s/$/,\"$res\"/" $arg
+        fi
+
+        ((counter++))
+    done < $arg
 done
