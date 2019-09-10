@@ -20,16 +20,20 @@ do
         line_counter=$(($line_counter + $lines_to_delete))
         line=$(sed "$line_counter q;d" $arg)
 
-        curr=$(echo $line | awk -F\; '{print $4}')
-        curr=$(sed 's/"//g' <<< $curr)
+        # Ensure string isn't null before doing anything
+        if ! [ -z $line ]
+        then
+            curr=$(echo $line | awk -F\; '{print $4}')
+            curr=$(sed 's/"//g' <<< $curr)
 
-        res=$(echo "$curr - $previous" | bc -l)
-        previous=$curr
+            res=$(echo "$curr - $previous" | bc -l)
+            previous=$curr
 
-        line=$(sed "s/$/,\"$res\"/" <<< $line)
+            line=$(sed "s/$/,\"$res\"/" <<< $line)
 
-        echo $line >> .tmp.csv
-        lines=$(($lines - $i))
+            echo $line >> .tmp.csv
+            lines=$(($lines - $i))
+        fi
     done
 
     # Replace semicolons by commas
