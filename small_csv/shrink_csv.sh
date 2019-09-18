@@ -28,6 +28,13 @@ do
         then
             curr=$(echo $line | awk -F\; '{print $4}')
             curr=$(sed 's/"//g' <<< $curr)
+
+            if [[ $curr == *"E"* ]]
+            then
+                first=$(echo $curr | awk -F E '{print $1}')
+                second=$(echo $curr | awk -F E '{print $2}')
+                curr=$(echo "scale=1; ($first * (10 ^ $second))" | bc)
+            fi
   
             res=$(echo "$curr - $prev" | bc -l)
             prev=$curr

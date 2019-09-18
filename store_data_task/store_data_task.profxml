@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_112" class="java.beans.XMLDecoder">
+ <object class="com.ti.dvt.energytrace.core.StatModel" id="StatModel0">
+  <void property="energyOnlyMode">
+   <boolean>true</boolean>
+  </void>
+  <void property="name">
+   <string>EnergyTrace_2019_09_17_181950</string>
+  </void>
+  <void property="properties">
+   <void method="put">
+    <string>RawDataPath</string>
+    <string>/home/junior/Documents/obdh-msp430fr5969-energy-trace/store_data_task/EnergyTrace_2019_09_17_181950/ETData.xml</string>
+   </void>
+  </void>
+  <void property="root">
+   <object class="com.ti.dvt.energytrace.core.Node" id="Node0">
+    <void property="name">
+     <string>EnergyTrace</string>
+    </void>
+    <void property="serChildren">
+     <array class="com.ti.dvt.energytrace.core.Node" length="2">
+      <void index="0">
+       <object class="com.ti.dvt.energytrace.core.StatModel$StateNode" id="StatModel$StateNode0">
+        <void property="level">
+         <int>1</int>
+        </void>
+        <void property="name">
+         <string>CPU</string>
+        </void>
+        <void property="parent">
+         <object idref="Node0"/>
+        </void>
+        <void property="serChildren">
+         <array class="com.ti.dvt.energytrace.core.Node" length="2">
+          <void index="0">
+           <object class="com.ti.dvt.energytrace.core.StatModel$StateNode" id="StatModel$StateNode1">
+            <void property="level">
+             <int>2</int>
+            </void>
+            <void property="longName">
+             <string>Low Power Mode</string>
+            </void>
+            <void property="name">
+             <string>LPM</string>
+            </void>
+            <void property="parent">
+             <object idref="StatModel$StateNode0"/>
+            </void>
+            <void id="NodeArray0" property="serChildren"/>
+            <void property="serChildren">
+             <object idref="NodeArray0"/>
+            </void>
+            <void property="serMeasurements">
+             <array class="com.ti.dvt.energytrace.core.Measurement" length="2">
+              <void index="0">
+               <object class="com.ti.dvt.energytrace.core.Measurement">
+                <void property="name">
+                 <string>Energy</string>
+                </void>
+               </object>
+              </void>
+              <void index="1">
+               <object class="com.ti.dvt.energytrace.core.Measurement">
+                <void property="name">
+                 <string>Cycle</string>
+                </void>
+               </object>
+              </void>
+             </array>
+            </void>
+           </object>
+          </void>
+          <void index="1">
+           <object class="com.ti.dvt.energytrace.core.StatModel$StateNode" id="StatModel$StateNode2">
+            <void property="level">
+             <int>2</int>
+            </void>
+            <void property="longName">
+             <string>Active Mode</string>
+            </void>
+            <void property="name">
+             <string>AM</string>
+            </void>
+            <void property="parent">
+             <object idref="StatModel$StateNode0"/>
+            </void>
+            <void id="NodeArray1" property="serChildren"/>
+            <void property="serChildren">
+             <object idref="NodeArray1"/>
+            </void>
+            <void property="serMeasurements">
+             <array class="com.ti.dvt.energytrace.core.Measurement" length="2">
+              <void index="0">
+               <object class="com.ti.dvt.energytrace.core.Measurement">
+                <void property="name">
+                 <string>Energy</string>
+                </void>
+               </object>
+              </void>
+              <void index="1">
+               <object class="com.ti.dvt.energytrace.core.Measurement">
+                <void property="name">
+                 <string>Cycle</string>
+                </void>
+               </object>
+              </void>
+             </array>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+        <void property="serMeasurements">
+         <array class="com.ti.dvt.energytrace.core.Measurement" length="2">
+          <void index="0">
+           <object class="com.ti.dvt.energytrace.core.Measurement">
+            <void property="name">
+             <string>Energy</string>
+            </void>
+           </object>
+          </void>
+          <void index="1">
+           <object class="com.ti.dvt.energytrace.core.Measurement">
+            <void property="name">
+             <string>Cycle</string>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+       </object>
+      </void>
+      <void index="1">
+       <object class="com.ti.dvt.energytrace.core.StatModel$SystemNode" id="StatModel$SystemNode0">
+        <void property="level">
+         <int>1</int>
+        </void>
+        <void property="name">
+         <string>System</string>
+        </void>
+        <void property="parent">
+         <object idref="Node0"/>
+        </void>
+        <void id="NodeArray2" property="serChildren"/>
+        <void property="serChildren">
+         <object idref="NodeArray2"/>
+        </void>
+        <void property="serMeasurements">
+         <array class="com.ti.dvt.energytrace.core.Measurement" length="5">
+          <void index="0">
+           <object class="com.ti.dvt.energytrace.core.Measurement" id="Measurement0">
+            <void property="accTotal">
+             <double>1.0634095256625633E19</double>
+            </void>
+            <void property="count">
+             <long>2301131</long>
+            </void>
+            <void property="lastValue">
+             <double>4599999.999627471</double>
+            </void>
+            <void property="name">
+             <string>Energy</string>
+            </void>
+            <void property="value">
+             <double>9.245182499840248E12</double>
+            </void>
+            <void property="watermarks">
+             <void property="hi">
+              <double>9.245182499840248E12</double>
+             </void>
+             <void property="lo">
+              <double>4199999.999999999</double>
+             </void>
+            </void>
+           </object>
+          </void>
+          <void index="1">
+           <object class="com.ti.dvt.energytrace.core.Measurement" id="Measurement1">
+            <void property="accTotal">
+             <double>8.257229523E9</double>
+            </void>
+            <void property="count">
+             <long>2301131</long>
+            </void>
+            <void property="lastValue">
+             <double>3591.0</double>
+            </void>
+            <void property="name">
+             <string>Voltage</string>
+            </void>
+            <void property="value">
+             <double>3591.0</double>
+            </void>
+            <void property="watermarks">
+             <void property="hi">
+              <double>3619.0</double>
+             </void>
+             <void property="lo">
+              <double>3578.0</double>
+             </void>
+            </void>
+           </object>
+          </void>
+          <void index="2">
+           <object class="com.ti.dvt.energytrace.core.Measurement" id="Measurement2">
+            <void property="accTotal">
+             <double>9.8585160439E12</double>
+            </void>
+            <void property="count">
+             <long>2301131</long>
+            </void>
+            <void property="lastValue">
+             <double>4276100.0</double>
+            </void>
+            <void property="name">
+             <string>Current</string>
+            </void>
+            <void property="value">
+             <double>4276100.0</double>
+            </void>
+            <void property="watermarks">
+             <void property="hi">
+              <double>4982000.0</double>
+             </void>
+             <void property="lo">
+              <double>0.0</double>
+             </void>
+            </void>
+           </object>
+          </void>
+          <void index="3">
+           <object class="com.ti.dvt.energytrace.core.Measurement" id="Measurement3">
+            <void property="accTotal">
+             <double>6.9050741066367539E17</double>
+            </void>
+            <void property="count">
+             <long>2301131</long>
+            </void>
+            <void property="lastValue">
+             <double>267000.0</double>
+            </void>
+            <void property="name">
+             <string>Cycle</string>
+            </void>
+            <void property="value">
+             <double>6.00138331E11</double>
+            </void>
+            <void property="watermarks">
+             <void property="hi">
+              <double>6.00138331E11</double>
+             </void>
+             <void property="lo">
+              <double>268000.0</double>
+             </void>
+            </void>
+           </object>
+          </void>
+          <void index="4">
+           <object class="com.ti.dvt.energytrace.core.Measurement" id="Measurement4">
+            <void property="accTotal">
+             <double>3.537578648642859E7</double>
+            </void>
+            <void property="count">
+             <long>2301131</long>
+            </void>
+            <void property="lastValue">
+             <double>15.3554751</double>
+            </void>
+            <void property="name">
+             <string>Power</string>
+            </void>
+            <void property="value">
+             <double>15.3554751</double>
+            </void>
+            <void property="watermarks">
+             <void property="hi">
+              <double>17.890362</double>
+             </void>
+             <void property="lo">
+              <double>0.0</double>
+             </void>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+       </object>
+      </void>
+     </array>
+    </void>
+    <void property="serMeasurements">
+     <array class="com.ti.dvt.energytrace.core.Measurement" length="2">
+      <void index="0">
+       <object class="com.ti.dvt.energytrace.core.Measurement">
+        <void property="name">
+         <string>Energy</string>
+        </void>
+       </object>
+      </void>
+      <void index="1">
+       <object class="com.ti.dvt.energytrace.core.Measurement">
+        <void property="name">
+         <string>Cycle</string>
+        </void>
+       </object>
+      </void>
+     </array>
+    </void>
+   </object>
+  </void>
+  <void property="targetStopWatch">
+   <void property="end">
+    <long>600138064000</long>
+   </void>
+  </void>
+ </object>
+</java>
