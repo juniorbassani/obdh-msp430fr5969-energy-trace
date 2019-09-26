@@ -1,1 +1,0 @@
-MSP430:  Flash/FRAM usage is 21514 bytes. RAM usage is 696 bytes.

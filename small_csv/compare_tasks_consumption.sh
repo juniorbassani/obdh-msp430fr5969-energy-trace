@@ -5,7 +5,7 @@
 # and store the results in a new file
 
 if [ $# != 2 ]; then
-    echo 'Exactly 2 CSV files need to be send to this script'
+    echo 'Exactly 2 CSV files need to be sent to this script'
     exit 1
 fi
 

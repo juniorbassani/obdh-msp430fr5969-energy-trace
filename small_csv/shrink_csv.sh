@@ -9,7 +9,7 @@ do
 
     line_counter=1
     prev=0
-  
+
     # Include another field in header
     header=$(sed "1 q;d" $arg)
     sed '1s/$/;Variation (uJ)/' <<< $header > .tmp.csv
@@ -18,7 +18,7 @@ do
     # in the csv file, calculate the variation since the
     # previous energy measurement and write the complete
     # result in the temporary file
-    for (( i = 1; i <= $total_data; i++))
+    for (( i = 1; i <= $total_data; i++ ))
     do
         line_counter=$(($line_counter + $lines_to_delete))
         line=$(sed "$line_counter q;d" $arg)
@@ -48,7 +48,14 @@ do
   
     # Replace semicolons by commas
     sed -i 's/;/,/g' .tmp.csv
+
+    dir=$(dirname $(realpath $0))
+    filename=$(basename $arg)
+    filename="${filename%.*}"
+    location="${dir}/${filename}"
+
+    mkdir $location
   
     # Rename temporary file with the name of the argument
-    mv .tmp.csv $arg
+    mv .tmp.csv "${location}/${filename}.csv"
 done
